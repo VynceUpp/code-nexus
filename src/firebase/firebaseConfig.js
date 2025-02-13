@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDumuTT5BHNRRMgBG8Wga0YzU48QUrxrXE",
-  authDomain: "code-nexus-3279e.firebaseapp.com",
-  projectId: "code-nexus-3279e",
-  storageBucket: "code-nexus-3279e.firebasestorage.app",
-  messagingSenderId: "681387896280",
-  appId: "1:681387896280:web:2b9c718fbbaf97028616ad",
-  measurementId: "G-LK8PWDJD5Q"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 
