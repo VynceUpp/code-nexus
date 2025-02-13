@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import { handleLogout } from "../services/authService";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -24,10 +25,13 @@ const Sidebar = () => {
     { name: "Join Us", icon: <MessageCircle size={20} />, path: "/join" },
   ];
 
-  const handleLogout = () => {
-    // Perform logout logic here (e.g., clear auth token, reset state)
-    console.log("User logged out");
-    navigate("/login"); // Redirect to login page after logout
+  const logout = async () => {
+    const result = await handleLogout();
+    if (result.success) {
+      navigate("/login"); // Redirect to login after logout
+    } else {
+      console.error("Logout failed:", result.error);
+    }
   };
 
   return (
@@ -61,7 +65,7 @@ const Sidebar = () => {
         ))}
         {/* Logout Button */}
       <button
-        onClick={handleLogout}
+        onClick={logout}
         className="flex items-center gap-3 w-full mt-4 p-2 text-red-500 hover:bg-gray-700 rounded-md"
       >
         <LogOut size={20} />
