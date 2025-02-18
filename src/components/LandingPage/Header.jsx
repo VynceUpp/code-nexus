@@ -10,6 +10,8 @@ import {
   Github,
   LogIn,
   UserPlus,
+  User,
+  Code,
 } from "lucide-react";
 import Button from "../ui/Button";
 
@@ -30,23 +32,23 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-gray-300">
-
-          <Link to="/challenges" className="hover:text-white transition">
-            Challenges
+          <Link
+            to="/challenges"
+            className="hover:text-white transition flex items-center gap-2"
+          >
+            <Code size={16} /> Challenges
+          </Link>
+          <Link
+            to="/community"
+            className="hover:text-white transition flex items-center gap-2"
+          >
+            <User size={16} /> Community
           </Link>
           <a
-            href="https://t.me/codenexus"
+            href="https://github.com/VynceUpp/code-nexus.git"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white transition"
-          >
-            <Send size={16} /> Community
-          </a>
-          <a
-            href="https://github.com/your-repo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white transition"
+            className="flex items-center gap-2 hover:text-white transition"
           >
             <Github size={16} /> GitHub
           </a>
@@ -87,7 +89,7 @@ const Header = () => {
             Challenges
           </Link>
           <a
-            href="https://t.me/codenexus"
+            href="/community"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 py-2 hover:text-white transition"
@@ -95,7 +97,7 @@ const Header = () => {
             <Send size={16} /> Community
           </a>
           <a
-            href="https://github.com/your-repo"
+            href="https://github.com/VynceUpp/code-nexus.git"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 py-2 hover:text-white transition"

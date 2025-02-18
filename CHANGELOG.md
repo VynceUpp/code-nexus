@@ -1,3 +1,8 @@
+# 17-2-2025
+ - added a community page
+ - removed sidebar anf navbar
+ - removed dashboard and profile page
+
 # 14-2-2025
  - Added firebase
  - added sign in with google, (github doesnt work yet)

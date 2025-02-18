@@ -42,13 +42,13 @@ const RegisterPage = () => {
   const signInWithGitHub = async () => {
     const result = await handleGitHubSignIn();
     if (!result.success) setError(result.error);
-    else navigate("/dashboard"); // Redirect after success
+    else navigate("/dashboard"); 
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
       <motion.div
-        className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-4xl text-white flex"
+        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-4xl text-white flex"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -99,14 +99,14 @@ const RegisterPage = () => {
             onClick={signInWithGoogle}
             className="bg-white text-black px-6 py-2 mb-3 rounded-md flex items-center gap-2 hover:bg-gray-300 w-full text-center justify-center"
           >
-            <img src="/google-icon.svg" alt="Google" className="w-5 h-5" />
+            <img src="/icons8-google-48.png" alt="Google" className="w-5 h-5" />
             Sign in with Google
           </button>
           <button
             onClick={signInWithGitHub}
             className="bg-gray-800 text-white px-6 py-2 rounded-md flex items-center gap-2 hover:bg-gray-700 w-full text-center justify-center"
           >
-            <img src="/github-icon.svg" alt="GitHub" className="w-5 h-5" />
+            <img src="/icons8-github-48.png" alt="GitHub" className="w-5 h-5" />
             Sign in with GitHub
           </button>
         </div>

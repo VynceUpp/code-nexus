@@ -23,7 +23,7 @@ const NotFound = () => {
         Oops! The page you're looking for doesn't exist.
       </motion.p>
       <motion.button
-        onClick={() => navigate("/dashboard")}
+        onClick={() => navigate("/")}
         className="bg-blue-600 px-6 py-3 rounded-lg font-semibold text-white hover:bg-blue-700 transition"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
