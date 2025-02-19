@@ -48,20 +48,20 @@ export const handleGoogleSignIn = async () => {
     // Extract meaningful error messages
     let errorMessage = "An error occurred during sign-in. Please try again.";
 
-    if (error.code === "auth/popup-closed-by-user") {
-      errorMessage = "Sign-in popup was closed before completing the sign-in.";
-    } else if (error.code === "auth/cancelled-popup-request") {
-      errorMessage = "Another sign-in request was made before completing the first.";
-    } else if (error.code === "auth/account-exists-with-different-credential") {
-      errorMessage =
-        "An account with this email already exists with a different sign-in method.";
-    } else if (error.code === "auth/network-request-failed") {
-      errorMessage = "Network error. Please check your internet connection.";
-    } else if (error.code === "auth/internal-error") {
-      errorMessage = "Internal error. Please try again later.";
-    } else if (error.message) {
-      errorMessage = error.message; // Use Firebase's default error message
-    }
+    // if (error.code === "auth/popup-closed-by-user") {
+    //   errorMessage = "Sign-in popup was closed before completing the sign-in.";
+    // } else if (error.code === "auth/cancelled-popup-request") {
+    //   errorMessage = "Another sign-in request was made before completing the first.";
+    // } else if (error.code === "auth/account-exists-with-different-credential") {
+    //   errorMessage =
+    //     "An account with this email already exists with a different sign-in method.";
+    // } else if (error.code === "auth/network-request-failed") {
+    //   errorMessage = "Network error. Please check your internet connection.";
+    // } else if (error.code === "auth/internal-error") {
+    //   errorMessage = "Internal error. Please try again later.";
+    // } else if (error.message) {
+    //   errorMessage = error.message; // Use Firebase's default error message
+    // }
 
     return { success: false, error: errorMessage };
   }
